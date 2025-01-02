@@ -8,20 +8,34 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Boston House Pricing</h1>
+        
     </header>
-    <main>
-        <section>
-            <h2>About Us</h2>
-            <p>We provide accurate and up-to-date pricing information for houses in the Boston area.</p>
-        </section>
-        <section>
-            <h2>Get Started</h2>
-            <p>Use our tools to estimate the value of your home or find the perfect house for you.</p>
-            <button onclick="location.href='/estimate'">Estimate Your Home</button>
-            <button onclick="location.href='/search'">Search for Homes</button>
-        </section>
-    </main>
+   <div class ="login">
+    <h1>Welcome to Boston House Pricing</h1>
+
+    <form action="{{ url_for('predict')}}"method="post">
+
+
+        <input type ="text" name="crim" placeholder="crim" required ="required" /><br>
+        <input type ="text" name="zn" placeholder="zn" required ="required" /><br>
+        <input type ="text" name="indus" placeholder="indus" required ="required" /><br>
+        <input type ="text" name="chas" placeholder="chas" required ="required" /><br>
+        <input type ="text" name="nox" placeholder="nox" required ="required" /><br>
+        <input type ="text" name="rm" placeholder="rm" required ="required" /><br>
+        <input type ="text" name="age" placeholder="age" required ="required" /><br>
+        <input type ="text" name="dis" placeholder="dis" required ="required" /><br>
+        <input type ="text" name="rad" placeholder="rad" required ="required" /><br>
+        <input type ="text" name="tax" placeholder="tax" required ="required" /><br>
+        <input type ="text" name="ptratio" placeholder="ptratio" required ="required" /><br>
+        <input type ="text" name="b" placeholder="b" required ="required" /><br>
+        <input type ="text" name="lsat" placeholder="lsat" required ="required" /><br>
+        <button type=" "submit" class=" btn btn-primary btn-block btn-large">Predict</button>
+     </form> 
+     <br>
+       
+   </div>
+
+   {{prediction_text}}
     <footer>
         <p>&copy; 2023 Boston House Pricing. All rights reserved.</p>
     </footer>
