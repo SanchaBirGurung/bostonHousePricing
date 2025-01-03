@@ -3,37 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boston House Pricing</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Boston House Pricing Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        
-    </header>
-   <div class ="login">
-    <h1>Welcome to Boston House Pricing</h1>
+    <div class="container">
+        <h2 class="text-center">Boston House Pricing Prediction</h2>
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="crim" placeholder="CRIM" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="zn" placeholder="ZN" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="indus" placeholder="INDUS" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="chas" placeholder="CHAS" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="nox" placeholder="NOX" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="rm" placeholder="RM" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="age" placeholder="AGE" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="dis" placeholder="DIS" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="rad" placeholder="RAD" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="tax" placeholder="TAX" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="ptratio" placeholder="PTRATIO" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="b" placeholder="B" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="lstat" placeholder="LSTAT" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
 
-    <form action="{{ url_for('predict')}}"method="post">
-
-
-        <input type ="text" name="crim" placeholder="crim" required ="required" /><br>
-        <input type ="text" name="zn" placeholder="zn" required ="required" /><br>
-        <input type ="text" name="indus" placeholder="indus" required ="required" /><br>
-        <input type ="text" name="chas" placeholder="chas" required ="required" /><br>
-        <input type ="text" name="nox" placeholder="nox" required ="required" /><br>
-        <input type ="text" name="rm" placeholder="rm" required ="required" /><br>
-        <input type ="text" name="age" placeholder="age" required ="required" /><br>
-        <input type ="text" name="dis" placeholder="dis" required ="required" /><br>
-        <input type ="text" name="rad" placeholder="rad" required ="required" /><br>
-        <input type ="text" name="tax" placeholder="tax" required ="required" /><br>
-        <input type ="text" name="ptratio" placeholder="ptratio" required ="required" /><br>
-        <input type ="text" name="b" placeholder="b" required ="required" /><br>
-        <input type ="text" name="lsat" placeholder="lsat" required ="required" /><br>
-        <button type=" "submit" class=" btn btn-primary btn-block btn-large">Predict</button>
-     </form> 
-     <br>
-       
-   </div>
 
    {{prediction_text}}
     <footer>
