@@ -1,6 +1,6 @@
-### bostonHousePricing
+# bostonHousePricing
 
-###Software and Tools Requirement
+#Software and Tools Requirement
 
 1.[Github account](https://github.com)
 2.[Vscode IDE] (https://code.visualstudio.com/)
